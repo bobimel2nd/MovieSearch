@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Favorite Movies</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/popup.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./assets/popup.js"></script>
+  <script type="text/javascript" src="./assets/movieSearch.js"></script>
+
+  <style>
+    img {
+      float: left;
+      margin-right: 10px;
+    }
+    .yellow {
+      color: yellow;
+    }
+    .tableBreak {
+      border: 1px solid white
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2><input type="text" id="movie" placeholder="Movie Search"><button id="Search">Search</button></h2>
+    <br><br>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Poster</th>
+          <th>Year</th>
+          <th>Type</th>
+          <th>Title</th>
+          <th style="border: 1px solid white">&nbsp;</th>
+          <th>Poster</th>
+          <th>Year</th>
+          <th>Type</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td></td><td></td><td></td><td></td><td class="tableBreak"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td class="tableBreak"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td class="tableBreak"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td class="tableBreak"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td class="tableBreak"></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+    <div id="buttons" class="btn-group btn-group-justified">
+    </div>
+  </div>
+  <div class="popup" data-popup="moviePopup">
+    <div class="popup-inner">
+        <img id="poster" src="#" alt="poster" height="250">
+        <h2 id="title"></h2>
+        <p id=details></p>
+        <a class="popup-close" data-popup-close="moviePopup" href="#">x</a>
+    </div>
+  </div>
+</body>
+</html>
