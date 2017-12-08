@@ -69,6 +69,7 @@ $( document ).ready(function() {
       var e=page+n;
       if (e > tp) {
         s = tp-n;
+        if (s<1) s=1;
         e = tp;
       }
       var pages = '<a href="#" class="btn btn-primary">&laquo;</a>';
