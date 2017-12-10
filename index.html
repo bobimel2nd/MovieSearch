@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Favorite Movies</title>
+  <title>Movie Search</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/popup.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -20,52 +20,37 @@
         color: black;
     }
     img {
-      float: left;
-      margin-right: 10px;
+      float: left;      
+      padding: 5px;
+      margin: 5px;
+      border: 1px solid black;
     }
-    td {
-        height: 65px;
-        vertical-align: center;
+    .smallPic {
+      width: 75%;
     }
-    .yellow {
-      color: yellow;
-    }
-    .noLines {
-      border: 2px solid transparent;
+    .bolded {
+      color: red;
+      font-weight: bolder;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h2><input type="text" id="movie" placeholder="Movie Search"><button id="Search">Search</button></h2>
-    <br><br>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Poster</th>
-          <th>Year</th>
-          <th>Type</th>
-          <th>Title</th>
-          <th style="border: 2px solid transparent">&nbsp;&nbsp;&nbsp;</th>
-          <th>Poster</th>
-          <th>Year</th>
-          <th>Type</th>
-          <th>Title</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td></td><td></td><td></td><td></td><td class="noLines"></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td class="noLines"></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td class="noLines"></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td class="noLines"></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td class="noLines"></td><td></td><td></td><td></td><td></td></tr>
-      </tbody>
-    </table>
-    <div id="buttons" class="btn-group btn-group-justified">
+    <div class="row">
+      <h2><input type="text" id="movie" placeholder="Movie Search">
+          <button id="Search">Search</button></h2>
     </div>
-  </div>
+    <br>
+    <div class="row">
+      <div id="buttons" class="btn-group btn-group-justified">
+      </div>
+    </div>
+
+    <div id="coverRows">
+    </div>
+
+  <!-- Pop up window for Detailed Information -->
   <div class="popup" data-popup="moviePopup">
     <div class="popup-inner">
         <img id="poster" src="#" alt="poster" height="250">
