@@ -25,6 +25,7 @@ $( document ).ready(function() {
   });
 
   function ChangePage(page) {
+    var x=Movies.length;
     if (page === "«") {
       displayPage = 1;
     } else if (page === "<") {
@@ -72,7 +73,7 @@ $( document ).ready(function() {
     var totalRows = Math.floor((Movies.length-1)/columnsPerPage)+1;
     var beg = displayPage;
     var end = displayPage + n;
-    totalPages = Math.floor((totalRows)/rowsPerPage);
+    totalPages = Math.floor((totalRows-1)/rowsPerPage)+1;
     if (end > totalPages) {
       beg = totalPages - n;
       if (beg < 1) beg = 1;
@@ -117,7 +118,7 @@ $( document ).ready(function() {
       img.data("imdbID",Movies[i].imdbID)
       col.append(img);
       }
-    if (i === end ) pageDisplayed = displayPage;
+    pageDisplayed = displayPage;
   }
 
   function GetMovie(imdbID) {
